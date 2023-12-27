@@ -1,0 +1,335 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .containerr {
+        width: 100%;
+        height: 150vh;
+        background-color: rgb(15, 15, 15);
+    }
+    
+    .containerr .sectioncontent .contenheadernavsection {
+        justify-content: center;
+        width: 1300px;
+        height: 700px;
+        background-image: url("https://w.forfun.com/fetch/60/60116990ad74d9dbc367f38e15fd97bb.jpeg");
+        background-size: cover;
+        opacity: 0.7;
+        background-position: center;
+        transform: translateX(150px);
+    }
+    
+    .contenheadernavsection h1 {
+        color: red;
+    }
+    
+    .contenheadernavsection header nav {
+        justify-content: center;
+        display: flex;
+    }
+    
+    header nav {
+        width: 100%;
+        position: absolute;
+        top: 20px;
+        border-bottom: 1px solid #fff;
+    }
+    
+    nav h1 {
+        text-align: center;
+        margin-left: 100px;
+    }
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 290px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #fcfcfc;
+        font-size: 1.1rem;
+    }
+    
+    nav ul li a:hover {
+        color: rgb(168, 47, 47);
+    }
+    
+    nav ul li {
+        list-style: none;
+        color: #fff;
+        margin-right: 40px;
+    }
+    
+    //////icon start header nav fiinished
+    /// 
+    .content-span {
+        margin-left: 100px;
+    }
+    
+    .content-span mat-icon {
+        color: #fff;
+    }
+    
+    .content-span span {
+        color: #fff;
+        margin-left: 20px;
+    }
+    
+    .content-span i {
+        color: #fff;
+    }
+    
+    .content-span select {
+        background: transparent;
+        color: #fff;
+        border: none;
+        margin-left: 10px;
+    }
+    
+    .content-span select option {
+        background-color: rgb(15, 15, 15);
+        color: #fff
+    }
+    
+    .content-span mat-icon {
+        margin-left: 20px;
+    }
+    
+    ////Responsive
+    ///
+    @media (max-width:520px) {
+        nav ul li a {
+            font-size: 0.78rem;
+            margin-left: -130px;
+        }
+        nav .content-span mat-icon {
+            display: none;
+        }
+        nav ul li {
+            margin: 20px;
+            padding: 10px;
+        }
+        .containerr .sectioncontent .contenheadernavsection {
+            width: 100%;
+            height: 800px;
+            background-image: url("https://w.forfun.com/fetch/60/60116990ad74d9dbc367f38e15fd97bb.jpeg");
+            // background-size: cover;
+            right: 148px;
+            position: relative;
+            z-index: 1;
+        }
+        nav h1 {
+            position: absolute;
+            z-index: 199;
+            left: 0;
+            margin-left: -1px;
+            top: -8px;
+        }
+    }
+    
+    @media (max-width:740px) {
+        nav ul li a {
+            font-size: 1.2rem;
+            margin-left: -70px;
+        }
+        nav .content-span mat-icon {
+            display: none;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        .containerr .sectioncontent .contenheadernavsection {
+            width: 100%;
+            height: 1200px;
+            background-image: url("https://w.forfun.com/fetch/60/60116990ad74d9dbc367f38e15fd97bb.jpeg");
+            background-size: cover;
+            right: 148px;
+            position: relative;
+            z-index: 1;
+        }
+        nav h1 {
+            position: absolute;
+            z-index: 199;
+            left: 0;
+            margin-left: -1px;
+            top: -8px;
+        }
+    }
+    
+    .containerr main {
+        position: absolute;
+        top: 220px;
+    }
+    
+    section .contenttext .button {
+        margin-left: 50px;
+    }
+    
+    section .contenttext button {
+        padding: 8px 28px;
+        border-radius: 50px;
+        border: 2px solid primary;
+    }
+    
+    main .contenttitle h1 {
+        color: #fff;
+        margin-top: 20px;
+        width: 400px;
+        margin-left: 50px;
+    }
+    
+    main .contenttex p {
+        color: #fff;
+        margin-left: 50px;
+        width: 360px;
+        font-size: 0.78rem;
+    }
+    
+    main .contenttext span {
+        color: red;
+    }
+    
+    main .contenttext p {
+        color: #fff;
+        font-size: 0.78rem;
+        margin-left: 50px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    main .contenttexticonsss mat-icon {
+        color: gold;
+        margin-left: 40px;
+    }
+    
+    .contenttexticonsss {
+        display: flex;
+    }
+    
+    main .contenttexticonsss span {
+        color: red;
+    }
+    
+    main .contenttexticonsss p {
+        color: #fff;
+        font-size: 0.98rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    main .contenttexticonsss #textid {
+        font-size: 1.8rem;
+        color: #fff;
+    }
+    
+    main .contenttextendbutton button {
+        padding: 8px 20px;
+        border-radius: 100px;
+        border: 2px solid primary;
+        margin-left: 50px;
+        margin-top: 20px;
+        box-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red, 0 0 40px red, 0 0 10px red, 0 0 10px red, 0 0 10px red, 0 0 1500px red;
+    }
+    
+    .contentcaruselflexbutton {
+        display: flex;
+        background-color: rgb(10, 10, 10);
+        width: 1300px;
+        margin-left: 150px;
+        height: 160px;
+    }
+    
+    .contenttitlee {
+        display: flex;
+        background-color: rgb(10, 10, 10);
+        width: 1300px;
+        margin-left: 150px;
+        height: 100px;
+    }
+    
+    .buttondiv {
+        display: flex;
+        margin-left: 150px;
+        margin-top: 50px;
+        border-bottom: #fff;
+        width: 960px;
+        height: 50px;
+        border-bottom: 1px solid #fff;
+    }
+    
+    .contentcaruselflexbutton .buttondiv button {
+        border-radius: 100px;
+    }
+    
+    .buttondiv button:nth-child(1) {
+        margin-left: 30px;
+    }
+    
+    .buttondiv button:nth-child(2) {
+        background-color: rgba(14, 13, 13, 0.986);
+        margin-left: 30px;
+    }
+    
+    .buttondiv button:nth-child(3) {
+        background-color: rgba(14, 13, 13, 0.986);
+        margin-left: 30px;
+    }
+    
+    .buttondiv button:nth-child(4) {
+        margin-left: 30px;
+    }
+    
+    .buttondiv button:nth-child(5) {
+        margin-left: 3cqb;
+        background-color: rgba(14, 13, 13, 0.986);
+    }
+    
+    .buttondiv button:nth-child(6) {
+        margin-left: 30px;
+    }
+    
+    .buttondiv button:nth-child(7) {
+        margin-left: 20px;
+        background-color: rgba(14, 13, 13, 0.986);
+    }
+    
+    .buttondiv button:nth-child(8) {
+        margin-left: 30px;
+        background-color: rgba(14, 13, 13, 0.986);
+    }
+    
+    .buttondiv button:nth-child(9) {
+        margin-left: 230px;
+        background-color: rgba(14, 13, 13, 0.986);
+    }
+    
+    .contentcarusel img {
+        width: 200px;
+        height: 100px;
+        margin: 10px;
+    }
+    
+    .contentcaurseldiv {
+        display: flex;
+    }
+    
+    .contenttitlee mat-icon {
+        color: red;
+        margin-left: 150px;
+    }
+    
+    .contenttitlee h1 {
+        color: #fff;
+    }
+    
+    .contenttitle {
+        color: #fff;
+    }
+    
+    .contentcaurseldiv {
+        margin-left: 140px;
+        margin-top: 20px;
+    }
