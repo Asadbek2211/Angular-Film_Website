@@ -3,6 +3,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MediaChange} from '@angular/flex-layout';
 import { MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponentComponent } from './dialog-component/dialog-component.component';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +13,17 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
   mediaSub: Subscription = new Subscription;
-  constructor(public mediaObserver:MediaObserver){}
+  constructor(public mediaObserver:MediaObserver , private  dialog:MatDialog){}
   ngOnDestroy() {
     this.mediaSub?.unsubscribe();
   }
-  ngOnInit() {
-  
-     
-    
+  ngOnInit() { 
   }
+  OpenDialog(){
+    this.Opens =  !this.Opens;
+  
+  }
+  Opens:boolean=false;
   title = 'ProjectsAngular';
   
 }

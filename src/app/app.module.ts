@@ -27,6 +27,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MaterialModule } from './material/material';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponentComponent } from './dialog-component/dialog-component.component';
 
 
 
@@ -35,7 +37,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     AppComponent,
     CalculatorComponent,
-    NewwebsiteComponent
+    NewwebsiteComponent,
+    DialogComponentComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
-    NgbModule
+    NgbModule,
+
   
  
     

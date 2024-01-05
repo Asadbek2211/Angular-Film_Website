@@ -1,1 +1,11 @@
-<app-newwebsite></app-newwebsite>
+<div class="containers">
+    <div class="content_boxx">
+        <div class="content_button">
+            <button (click)="OpenDialog()" mat-button color="primary"><mat-icon>edit</mat-icon>Edit Me</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="Opens" class="content_input">
+    <input placeholder="       Edit Me" type="text">
+</div>
