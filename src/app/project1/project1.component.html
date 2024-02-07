@@ -1,0 +1,18 @@
+<!-- <div>
+    <form>
+        <input ngModel #name="ngModel" (change)="NgModelschange(name)" [ngModelOptions]="{standalone: true}">
+    </form></div> -->
+
+
+<div class="container">
+
+    <div class="form-group">
+        <label for="FirstName ">Ism:</label> <input minlength="7" maxlength="15" required ngModel type="text" #FirstName="ngModel" id="FirstName" class="form-control" (change)="onNameChange(FirstName)">
+        <div class="alert alert-primary" *ngIf="FirstName.touched && FirstName.valid ">
+            <div *ngIf="FirstName.errors && FirstName.errors['required']">Ism majburiy</div>
+
+            <div *ngIf="FirstName.errors &&  FirstName.errors['minlength']">Eng kamida {{FirstName.errors['minlength'].requiredLength}} ta belgidan oshiq bo'lsin</div>
+
+        </div>
+    </div>
+</div>

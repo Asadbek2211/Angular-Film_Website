@@ -1,0 +1,25 @@
+<div class="main">
+    <div class="form-group">
+        <h1>Forms In Boostrap</h1>
+        <form [formGroup]="registerform" novalidate>
+            <div class="form-group">
+                <h2>Vertical Forms</h2>
+                <label for="">Name</label>
+                <input class="form-control" type="text" id="name" formControlName="name" placeholder="Enter your username">
+                <div *ngIf="registerform.get('name')?.invalid && registerform.get('name')?.dirty && registerform.get('name')?.touched" class="alert alert-danger">
+                    <div *ngIf="registerform.get('name')?.hasError('required')">Name Required!</div>
+                    <div *ngIf="registerform.get('name')?.hasError('minlength')">At least 4 letters must be present</div>
+                    <div *ngIf="registerform.get('name')?.hasError('maxlength')">There should be a maximum of 10</div>
+                </div>
+                <label for="">Password</label>
+                <input class="form-control" type="password" id="password" formControlName="password" placeholder="Enter your password">
+                <div *ngIf="registerform.get('password')?.invalid && registerform.get('password')?.dirty && registerform.get('password')?.touched" class="alert alert-danger">
+                    <div *ngIf="registerform.get('password')?.hasError('required')">Password Required</div>
+                    <div *ngIf="registerform.get('password')?.hasError('minlength')">You must enter at least 4 letters</div>
+                    <div *ngIf="registerform.get('password')?.hasError('maxlength')">Enter up to 10 letters in Italian</div>
+                </div>
+                <button (onclick)="OnSubmits()">Log In</button>
+            </div>
+        </form>
+    </div>
+</div>

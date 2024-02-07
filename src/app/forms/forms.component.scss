@@ -1,0 +1,30 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.main {
+    display: flex;
+    background-image: linear-gradient(45deg, #5204e0, #a424c9);
+}
+
+.form-group h1 {
+    padding: 40px 30px 40px 30px;
+    vertical-align: middle;
+}
+
+.form-group form {
+    padding: 20px 30px 20px 30px;
+    margin-top: -20px;
+}
+
+.form-group form input {
+    width: 600px;
+}
+
+.form-group form button {
+    background-color: green;
+    text-align: center;
+    padding: 8px 6px 8px 6px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}

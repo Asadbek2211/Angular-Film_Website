@@ -1,0 +1,46 @@
+<div class="main">
+    <div class="section">
+        <h1>Say Hello!</h1>
+        <form [formGroup]="databseform">
+            <div class="form-group">
+                <div class="labelcontent"><label>Your Name</label>
+                    <input id="firstname" [(ngModel)]="firstname" (change)="FirstNameschange()" type="text" formControlName="name" placeholder="Enter your name">
+
+                    <div *ngIf="databseform.get( 'name')?.invalid && databseform.get( 'name')?.dirty && databseform.get( 'name')?.touched ">
+                        <div *ngIf="databseform.get( 'name')?.hasError( 'required') ">Name Required!</div>
+                        <div *ngIf="databseform.get( 'name')?.hasError( 'minlength') ">At least 4 letters should be included</div>
+                        <div *ngIf="databseform.get( 'name')?.hasError( 'maxlength') ">Maximum of 18 letters</div>
+                    </div>
+                </div>
+                <div class="labelcontent "><label>Email</label>
+                    <input minlength="4" type="text" placeholder="Enter you email" formControlName="email" [(ngModel)]="email" (change)="EmailChange()">
+                    <div *ngIf="databseform.get( 'email')?.invalid && databseform.get( 'email')?.dirty && databseform.get( 'email')?.touched ">
+                        <div *ngIf="databseform.get( 'email')?.hasError( 'required') ">Email Required!</div>
+                        <div *ngIf="databseform.get( 'email')?.hasError( 'minlength') ">At least 4 letters should be included</div>
+                        <div *ngIf="databseform.get( 'email')?.hasError( 'maxlength') ">Maximum of 25 letters</div>
+                        <div *ngIf="databseform.get( 'email')?.hasError( 'email') ">Email ID not entered</div>
+                    </div>
+                </div>
+                <div class="labelcontent "> <label>Needed Services</label>
+                    <input type="number" placeholder="Choose services" formControlName="services" [(ngModel)]="services" (change)="Serviceschange()">
+                    <div *ngIf="databseform.get( 'services')?.invalid && databseform.get( 'services')?.dirty && databseform.get( 'services')?.touched ">
+                        <div *ngIf="databseform.get( 'services')?.hasError( 'required') ">Required!</div>
+                    </div>
+                </div>
+                <div class="labelcontent "> <label>Budget</label>
+                    <input type="number" placeholder="Select Budget " formControlName="budget" [(ngModel)]="budget" (change)="Budgetchange()">
+                    <div *ngIf="databseform.get( 'budget')?.invalid && databseform.get( 'budget')?.dirty && databseform.get( 'budget')?.touched ">
+                        <div *ngIf="databseform.get( 'services')?.hasError( 'required') ">Required!</div>
+                    </div>
+                </div>
+                <div class="labelcontent ">
+                    <textarea cols="30 " rows="10" placeholder="Your message here " formControlName="textarea" [(ngModel)]="textarea" (change)="TextAreachange()"></textarea></div>
+
+                <div *ngIf="databseform.get( 'textarea')?.invalid && databseform.get( 'textarea')?.dirty && databseform.get( 'textarea')?.touched ">
+                    <div *ngIf="databseform.get( 'textarea')?.hasError( 'required') ">Required!</div>
+                </div>
+                <div> <button (click)="alerts() " type="submit ">Submit</button></div>
+            </div>
+        </form>
+    </div>
+</div>

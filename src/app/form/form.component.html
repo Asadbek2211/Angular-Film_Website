@@ -1,0 +1,41 @@
+<div class="main">
+    <div class="form">
+        <form [formGroup]="userform">
+            <h1>Форма входа</h1>
+            <div class="section_1"><label for="name">Ваш логин</label>
+                <input id="Name" formControlName="Name" required minlength="10" type="text">
+                <div *ngIf="Name?.touched && Name?.invalid">
+                    <div *ngIf="Name?.errors?.['required']">Требуется вход</div>
+                    <div *ngIf="Name?.errors?.['minlength']">Логин должен содержать не {{Name?.errors?.['minlength'].requiredLength}} менее букв.</div>
+                    <div *ngIf="Name?.errors?.['maxlength']">Логин максимум {{Name?.errors?.['maxlength'].requiredLength}} символов.</div>
+                    <div *ngIf="Name?.errors?.['noSpace']">Не может быть пустым</div>
+                    <div *ngIf="Name?.errors?.['isTaken']">это название занято</div>
+
+                </div>
+            </div>
+            <div class="section_2"><label>Ваш паррол</label>
+                <input type="password" required minlength="10" formControlName="password">
+                <div *ngIf="password?.touched && password?.invalid">
+                    <div *ngIf="password?.errors?.['required']">Необходим пароль</div>
+                    <div *ngIf="password?.errors?.['minlength']">Пожалуйста, введите не {{password?.errors?.['minlength'].requiredLength}} менее букв</div>
+                    <div *ngIf="password?.errors?.['maxlength']">Логин максимум {{password?.errors?.['maxlength'].requiredLength}} символов.</div>
+                    <div *ngIf="password?.errors?.['noSpace']">Не может быть пустым</div>
+                </div>
+            </div>
+            <div class="section_2"><label for="Fax">Фах</label>
+                <input type="text" required minlength="10" formControlName="fax" id="fax">
+                <div *ngIf="fax?.touched && fax?.invalid">
+                    <div *ngIf="fax?.errors?.['required']">Необходим Фах</div>
+                    <div *ngIf="fax?.errors?.['minlength']">Пожалуйста, введите не {{fax?.errors?.['minlength'].requiredLength}} менее букв</div>
+                    <div *ngIf="fax?.errors?.['maxlength']">Логин максимум {{fax?.errors?.['maxlength'].requiredLength}} символов.</div>
+                    <div *ngIf="fax?.errors?.['noSpace']">Не может быть пустым</div>
+                    <div *ngIf="fax?.errors?.['isTaken']">это название занято</div>
+                </div>
+            </div>
+            <button type="submit">Вход</button>
+
+        </form>
+    </div>
+</div>
+
+<!-- NgModel kiritlsa form kiritilmidi -->

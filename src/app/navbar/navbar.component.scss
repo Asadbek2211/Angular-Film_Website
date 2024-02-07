@@ -1,0 +1,72 @@
+/* src/app/navbar/navbar.component.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+:root {
+    ---font-family: 'Archivo Black', sans-serif;
+    ---color: rgba(18, 247, 255, 0.6);
+}
+
+.main {
+    background-image: linear-gradient(45deg, #5204e0, #a424c9);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    background-color: #fff;
+    max-width: 600px;
+    padding: 25px;
+    min-width: 50px;
+    border: none;
+    border-radius: 10px;
+}
+
+.section h1 {
+    text-align: center;
+    color: black;
+    font-family: var(---font-family);
+    font-size: 2rem;
+}
+
+form label {
+    font-family: var(---font-family);
+}
+
+form input {
+    width: 100%;
+    outline: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+}
+
+.labelcontent {
+    margin: 10px;
+}
+
+form textarea {
+    color: black;
+    font-family: var(---font-family);
+    padding: 5px;
+    outline: none;
+}
+
+form button {
+    text-align: center;
+    width: 100%;
+    background-image: linear-gradient(45deg, #a424c9, #5204e0, #4f0abe);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    padding: 12px 10px 12px 10px;
+    font-size: 1rem;
+    font-family: var(---font-family)
+}
+
+form button:hover {
+    box-shadow: 0 0 10px #5204e0, 0 0 20px #5204e0, 0 0 30px #5204e0, 0 0 40px #5204e0, 0 0 70px #5204e0, 0 0 80px 5204e0, 0 0 100px #5204e0, 0 0 150px #5204e0;
+}

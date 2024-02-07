@@ -3,27 +3,26 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MediaChange} from '@angular/flex-layout';
 import { MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
-import { MatDialog } from '@angular/material/dialog';
-import { DialogComponentComponent } from './dialog-component/dialog-component.component';
+import { NgModel, NgForm } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';  
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
-  mediaSub: Subscription = new Subscription;
-  constructor(public mediaObserver:MediaObserver , private  dialog:MatDialog){}
-  ngOnDestroy() {
-    this.mediaSub?.unsubscribe();
+
+export class AppComponent  {
+  openDialog(dialogType: string): void {
+    console.log(`Opening ${dialogType} dialog...`);
+    // Bu yerda kerakli amallarni bajarish uchun kodni yozing
   }
-  ngOnInit() { 
-  }
-  OpenDialog(){
-    this.Opens =  !this.Opens;
-  
-  }
-  Opens:boolean=false;
-  title = 'ProjectsAngular';
-  
+// selectedColor: string = 'black';
+
+// changeColor(color: string): void {
+//   this.selectedColor = color;
+// }
 }
