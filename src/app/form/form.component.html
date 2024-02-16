@@ -9,7 +9,7 @@
                     <div *ngIf="Name?.errors?.['minlength']">Логин должен содержать не {{Name?.errors?.['minlength'].requiredLength}} менее букв.</div>
                     <div *ngIf="Name?.errors?.['maxlength']">Логин максимум {{Name?.errors?.['maxlength'].requiredLength}} символов.</div>
                     <div *ngIf="Name?.errors?.['noSpace']">Не может быть пустым</div>
-                    <div *ngIf="Name?.errors?.['isTaken']">это название занято</div>
+                    <div class="alert alert-danger" *ngIf="Name?.errors?.['isTaken']">это название занято</div>
 
                 </div>
             </div>

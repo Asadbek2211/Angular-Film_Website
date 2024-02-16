@@ -1,13 +1,7 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MediaChange} from '@angular/flex-layout';
-import { MediaObserver } from '@angular/flex-layout';
-import { Subscription } from 'rxjs';
-import { NgModel, NgForm } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';  
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './auth.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -16,13 +10,30 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 
 export class AppComponent  {
-  openDialog(dialogType: string): void {
-    console.log(`Opening ${dialogType} dialog...`);
-    // Bu yerda kerakli amallarni bajarish uchun kodni yozing
-  }
+ 
 // selectedColor: string = 'black';
 
 // changeColor(color: string): void {
 //   this.selectedColor = color;
 // }
+users:string[];
+constructor( private  userservice:UserService){
+this.users=userservice.getUser();console.log(userservice)
+}
+addUser():void{
+  const newUser=  prompt("user qo'shish");
+  if(newUser){
+    this.userservice.addUser(newUser);
+    this.users= this.userservice.getUser()
+  }
+
+}
+removeUser():void{
+  let userRemove=prompt("delete text");
+  if(userRemove){
+    this.userservice.removeUser(userRemove);
+    this.users=this.userservice.getUser();
+  }
+}
+
 }

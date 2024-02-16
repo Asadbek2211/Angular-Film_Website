@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, NgModel, Validators } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { NgIf } from '@angular/common';
-import { LoginValidators } from './login.validators';
+
 import { AsyncValidator } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginValidation } from '../projects/LoginValidation';
+
 
 
 @Component({
@@ -20,7 +22,7 @@ export class FormComponent {
     Name: new FormControl('',  [Validators.required,
     Validators.minLength(10) ,
   Validators.maxLength(15),
-  LoginValidators.noSpace   ],LoginValidators.isTaken
+     ], LoginValidation.isTaken
  
      
 
@@ -29,14 +31,14 @@ export class FormComponent {
     Validators.required,
     Validators.minLength(10),
     Validators.maxLength(15),
-    LoginValidators.noSpace
+  
   ]),
   fax:new FormControl('',[
     Validators.required,
     Validators.minLength(10),
-    Validators.maxLength(15), LoginValidators.noSpace
+    Validators.maxLength(15), 
    
-  ] ,LoginValidators.isTaken )
+  ] )
 
   });
   get Name(){

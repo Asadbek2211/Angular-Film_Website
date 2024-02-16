@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CalculatorComponent } from './calculator/calculator.component';
-import { NewwebsiteComponent } from './newwebsite/newwebsite.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon'
 import { MatIcon } from '@angular/material/icon';
@@ -25,17 +23,19 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MaterialModule } from './material/material';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponentComponent } from './dialog-component/dialog-component.component';
-
-import { TableComponent } from './table/table.component';
 import { NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';  
-
 import { Project1Component } from './project1/project1.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsComponent } from './forms/forms.component';
 import { FormComponent } from './form/form.component';
-import { TodolistComponent } from './todolist/todolist.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { AuthService } from './auth.service';
+import { NewProject } from './newproject/newproject.component';
+import { TaskprojectComponent } from './taskproject/taskproject.component';
+import { ModalComponent } from './modal/modal.component';
+
+
 
 
 
@@ -44,18 +44,16 @@ import { TodolistComponent } from './todolist/todolist.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CalculatorComponent,
-    NewwebsiteComponent,
-    DialogComponentComponent,
-    TableComponent,
     AppComponent,
     Project1Component,
     NavbarComponent,
     FormsComponent,
     FormComponent,
-    TodolistComponent,
- 
+    ProjectsComponent,
+    TaskprojectComponent,
+    ModalComponent,
    
+    
   ],
   imports: [
    
@@ -88,7 +86,7 @@ import { TodolistComponent } from './todolist/todolist.component';
     
     
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
